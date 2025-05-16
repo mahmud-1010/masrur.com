@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>মারকাযু উলুমিল কুরআন</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+      font-family: 'Tiro Bangla', serif;
+    }
+    .header-area {
+      background-color: #064e3b;
+    }
+  </style>
+</head>
+<body class="bg-green-50 overflow-x-hidden">
+  <!-- Header -->
+  <header class="header-area shadow p-4">
+    <div class="flex flex-col items-center justify-center text-center">
+      <h1 class="text-3xl md:text-5xl font-bold text-white">মারকাযু উলুমিল কুরআন বালক-বালিকা শাখা</h1>
+    </div>
+  </header>
+
+  <!-- Navigation Buttons -->
+  <section class="py-8 px-2 sm:px-4 md:px-10 lg:px-20">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 text-center text-sm">
+      <button onclick="toggleSection('departments')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">বিভাগ সমূহ</button>
+      <button onclick="toggleSection('features')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">বৈশিষ্ট্য সমূহ</button>
+      <button onclick="toggleSection('admission')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">ভর্তি ফরম</button>
+      <button onclick="toggleSection('notice')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">নোটিশ</button>
+      <button onclick="toggleSection('contact')" class="bg-green-700 text-white py-3 px-4 rounded hover:bg-green-800">যোগাযোগ</button>
+    </div>
+  </section>
+
+  <!-- Floating Plus Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <div class="relative group">
+      <button class="bg-green-800 text-white p-4 rounded-full shadow-lg text-2xl hover:bg-green-900">+</button>
+      <div class="absolute bottom-14 right-0 space-y-2 hidden group-hover:block">
+        <a href="/admin-login" class="block bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700">অ্যাডমিন লগইন</a>
+        <a href="/student-management" class="block bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700">ছাত্র ব্যবস্থাপনা</a>
+        <a href="/sms-gateway" class="block bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700">এসএমএস গেটওয়ে</a>
+        <a href="/online-admission" class="block bg-green-600 text-white px-4 py-2 rounded shadow hover:bg-green-700">অনলাইন ভর্তি</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Departments Section -->
+  <section id="departments" class="py-10 px-2 sm:px-4 md:px-10 lg:px-20 max-w-screen-lg mx-auto hidden">
+    <h2 class="text-2xl font-bold text-center text-green-800 mb-6">আমাদের বিভাগসমূহ</h2>
+    <div class="space-y-6 text-green-900">
+      <div>
+        <h3 class="text-xl font-semibold text-green-700">আদর্শ নূরানী বিভাগ</h3>
+        <p class="mt-2">এই বিভাগে ছোট ছোট শিক্ষার্থীদের জন্য আরবী বর্ণমালা, কায়দা, সূরা ও ছোট ছোট দোআ অত্যন্ত যত্নসহকারে শেখানো হয়। শুদ্ধ উচ্চারণ ও মৌলিক ইসলামি শিক্ষার ভিত্তি গড়ে তোলাই এই বিভাগের মূল লক্ষ্য।</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-green-700">সহীহ শুদ্ধ নাজেরা বিভাগ</h3>
+        <p class="mt-2">এই বিভাগে শিক্ষার্থীদের কুরআন মাজীদের নাজেরা বা তিলাওয়াত শুদ্ধভাবে শেখানো হয়। তাকরার ও নিয়মিত রিভিশনের মাধ্যমে তারা কুরআন পাঠে দক্ষতা অর্জন করে।</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-green-700">হিফজ বিভাগ</h3>
+        <p class="mt-2">এই বিভাগে শিক্ষার্থীরা সম্পূর্ণ কুরআন হিফজ করে। প্রতিদিনের সবক, সাবক, আমুখতা এবং সুনির্দিষ্ট রুটিন অনুযায়ী হিফজ কার্যক্রম পরিচালিত হয়। ছাত্রদের মানসম্মতভাবে হাফিয বানানোই আমাদের লক্ষ্য।</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-green-700">কিতাব বিভাগ</h3>
+        <p class="mt-2">এই বিভাগে আলিম-ফাযিল পর্যায়ের কিতাবপাঠ, আরবি সাহিত্য, ফিকহ, হাদীস, তাফসীর ইত্যাদি বিষয় শিক্ষা দেওয়া হয়। ধর্মীয় জ্ঞানসম্পন্ন প্রজন্ম গঠনের জন্য এই বিভাগ অত্যন্ত গুরুত্বপূর্ণ।</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="py-10 px-4 max-w-screen-md mx-auto hidden">
+    <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">✨ বৈশিষ্ট্য সমূহ</h2>
+    <ul class="list-disc list-inside space-y-3 text-green-900">
+      <li>অভিজ্ঞ ও দক্ষ শিক্ষক দ্বারা পাঠদান।</li>
+      <li>শৃঙ্খলাপূর্ণ পরিবেশ ও সময়ানুবর্তিতা।</li>
+      <li>নিয়মিত পড়া-শোনা মনিটরিং এবং মা-বাবার সাথে যোগাযোগ।</li>
+      <li>সাপ্তাহিক/মাসিক পরীক্ষার ব্যবস্থা।</li>
+      <li>প্রতিটি বিভাগের জন্য আলাদা কোর্স রূপরেখা।</li>
+      <li>অনলাইন ভর্তি ও নোটিশ সেবা।</li>
+      <li>অভিভাবককে এসএমএস মাধ্যমে তথ্য প্রেরণ।</li>
+      <li>প্রতি ছাত্রের অগ্রগতি অনলাইন সিস্টেমে সংরক্ষণ।</li>
+    </ul>
+  </section>
+
+  <!-- Notice Section -->
+  <section id="notice" class="py-10 px-4 max-w-screen-md mx-auto hidden">
+    <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">📢 নোটিশ</h2>
+    <div class="bg-white p-4 shadow rounded mb-4">কোনো নোটিশ এখনো প্রকাশ হয়নি।</div>
+    <div class="text-center">
+      <a href="/admin-login" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800 inline-block">নতুন নোটিশ আপলোড করুন</a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-10 px-4 max-w-screen-md mx-auto hidden">
+    <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">📞 যোগাযোগ</h2>
+    <ul class="text-green-900 space-y-2 text-center">
+      <li>মোবাইল: ০১৭১২৩৪৫৬৭৮</li>
+      <li>অফিস: ০১৮১২৩৪৫৬৭৮</li>
+      <li>ই-মেইল: info@tamjid.edu.bd</li>
+      <li>Facebook: <a href="https://facebook.com/yourpage" class="text-blue-600 underline" target="_blank">facebook.com/yourpage</a></li>
+      <li>WhatsApp: <a href="https://wa.me/8801712345678" class="text-green-600 underline" target="_blank">মেসেজ করুন</a></li>
+    </ul>
+  </section>
+
+  <!-- Admission Form Section -->
+  <section id="admission" class="py-10 px-4 max-w-screen-md mx-auto hidden">
+    <h2 class="text-2xl font-bold text-green-800 mb-6 text-center">📝 ভর্তি ফরম</h2>
+    <form class="space-y-4 bg-white p-6 rounded shadow">
+      <div>
+        <label for="name" class="block text-green-800 font-semibold mb-1">নাম</label>
+        <input id="name" type="text" placeholder="আপনার নাম লিখুন" class="w-full border border-green-400 rounded px-3 py-2" required />
+      </div>
+      <div>
+        <label for="phone" class="block text-green-800 font-semibold mb-1">মোবাইল নম্বর</label>
+        <input id="phone" type="tel" placeholder="০১XXXXXXXXX" class="w-full border border-green-400 rounded px-3 py-2" required />
+      </div>
+      <div>
+        <label for="department" class="block text-green-800 font-semibold mb-1">বিভাগ নির্বাচন</label>
+        <select id="department" class="w-full border border-green-400 rounded px-3 py-2" required>
+          <option value="">বিভাগ নির্বাচন করুন</option>
+          <option value="noorani">আদর্শ নূরানী বিভাগ</option>
+          <option value="nazera">সহীহ শুদ্ধ নাজেরা বিভাগ</option>
+          <option value="hifz">হিফজ বিভাগ</option>
+          <option value="kitab">কিতাব বিভাগ</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" class="bg-green-700 text-white px-6 py-2 rounded hover:bg-green-800">আবেদন করুন</button>
+      </div>
+    </form>
+  </section>
+
+  <script>
+    function toggleSection(sectionId) {
+      const section = document.getElementById(sectionId);
+      if (!section) {
+        console.warn('Section with ID "' + sectionId + '" not found.');
+        return;
+      }
+
+      const allSections = ['departments', 'features', 'admission', 'notice', 'contact'];
+      allSections.forEach(id => {
+        const sec = document.getElementById(id);
+        if (sec) {
+          if (id === sectionId) {
+            sec.classList.toggle('hidden');
+          } else {
+            sec.classList.add('hidden');
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
